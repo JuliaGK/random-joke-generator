@@ -23,4 +23,16 @@ class JokesStorage {
         this._jokes.pop();
     }
 
+    showRandomJoke() {
+        if (this._jokes.length === 0) {
+            console.log('The jokes storage is empty');
+        } else {
+            let index = Math.floor(Math.random() * this._jokes.length);
+            console.log(this._jokes[index]);
+        }
+    }
+
 }
+
+let jokeStorage = new JokesStorage();
+jokeStorage.showRandomJoke();
